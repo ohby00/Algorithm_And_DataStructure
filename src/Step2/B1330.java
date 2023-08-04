@@ -9,7 +9,6 @@ public class B1330 {
 
         int A = in.nextInt();
         int B = in.nextInt();
-
         in.close();
 
         System.out.println((A>B) ? ">" : ((A<B) ? "<" : "==" ));
