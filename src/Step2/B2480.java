@@ -1,6 +1,6 @@
+package Step2;
 import java.util.Scanner;
-
-public class Main {
+public class B2480 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
