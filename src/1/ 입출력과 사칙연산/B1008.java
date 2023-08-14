@@ -1,4 +1,4 @@
-package Step1;
+package 입출력;
 import java.util.Scanner;
 
 public class B1008 {

@@ -1,4 +1,4 @@
-package Function;
+package Function_p;
 
 public class SB {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Step1;
+package 입출력;
 
 public class B10171 {
     public static void main(String[] args) {

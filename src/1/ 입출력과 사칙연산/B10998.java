@@ -1,7 +1,7 @@
-package Step1;
+package 입출력;
 import java.util.Scanner;
 
-public class B1000 {
+public class B10998 {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -9,6 +9,7 @@ public class B1000 {
         int B = in.nextInt();
         in.close();
 
-        System.out.println(A + B);
+        System.out.println(A * B);
+
     }
 }
