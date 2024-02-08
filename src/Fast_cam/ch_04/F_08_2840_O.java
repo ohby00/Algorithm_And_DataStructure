@@ -5,10 +5,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class F_08_2840 {
+public class F_08_2840_O {
     public static void main(String[] args) throws IOException {
-
-        StringBuilder sb = new StringBuilder();
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
         int N = Integer.parseInt(st.nextToken());
@@ -18,9 +16,6 @@ public class F_08_2840 {
         char[] arr_ch2 = new char[N];
         int num = 0;
         int fixnum = 0;
-
-        boolean[] as = new boolean[124];
-        boolean[] as2 = new boolean[124];
 
         for (int i = 0; i < K; i++) {
             st = new StringTokenizer(br.readLine(), " ");
@@ -41,7 +36,8 @@ public class F_08_2840 {
         }
 
         boolean obw = false;
-        for (int i = 0; i < arr_che.length; i++) {
+
+        for (int i = 0; i < arr_ch.length; i++) {
             int count = 0;
             for (int j = 0; j < arr_ch2.length ; j++) {
                 if(arr_che[i] == arr_ch2[j])
@@ -59,7 +55,6 @@ public class F_08_2840 {
                 if (arr_ch2[l] == 0)
                     arr_ch2[l] = '?';
                 System.out.print(arr_ch2[l]);
-                sb.append(arr_ch2[l]).append("\n");
             }
         }
     }
