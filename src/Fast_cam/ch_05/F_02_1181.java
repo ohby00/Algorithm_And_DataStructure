@@ -15,7 +15,7 @@ public class F_02_1181 {
             array[i] = br.readLine();
         }
 
-        Arrays.sort(array);
+
         for (int i = 0; i < N; i++) {
             System.out.println(array[i]);
         }
