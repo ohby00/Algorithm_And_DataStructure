@@ -23,7 +23,12 @@ public class F_05_1302 {
             String titleName = title.getKey();
             int count = title.getValue();
             if (count > maxCount ||
-                     )
+                    (count == maxCount && titleName.compareTo(maxTitle) < 0)) {
+                maxTitle = titleName;
+                maxCount = count;
+
+            }
         }
+        System.out.println(maxTitle);
     }
 }
