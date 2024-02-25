@@ -22,6 +22,7 @@ public class F_05_1302 {
         for (Map.Entry<String, Integer> title : map.entrySet()) {
             String titleName = title.getKey();
             int count = title.getValue();
+
             if (count > maxCount ||
                     (count == maxCount && titleName.compareTo(maxTitle) < 0)) {
                 maxTitle = titleName;
