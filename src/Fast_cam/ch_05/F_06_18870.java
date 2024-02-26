@@ -15,6 +15,16 @@ public class F_06_18870 {
             xs[i] = Integer.parseInt(st.nextToken());
             set.add(xs[i]);
         }
+        for(int y : xs)
+            System.out.print( y + " ");
+        System.out.println("xs");
+        System.out.println();
+
+        for(int y : set)
+            System.out.print( y +" ");
+        System.out.println("set");
+        System.out.println();
+
         Map<Integer, Integer> sortedIndex = new HashMap<>();
         int idx = 0;
         for(int x : set)
