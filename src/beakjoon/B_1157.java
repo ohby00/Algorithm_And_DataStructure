@@ -5,19 +5,26 @@ import java.io.*;
 public class B_1157 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringBuilder sb = new StringBuilder();
-
         String str = br.readLine();
-        String str2 = "";
+        int[] arr = new int[26];
+        int max = 0;
+        int n = 0;
+
         for (int i = 0; i < str.length(); i++) {
-            int a = (int)str.charAt(i);
-            if(a >= 97)
-                a = a - 32;
-            else
-                a = a + 32;
-            str2 += (char)a;
+            if(str.charAt(i) >= 97){
+                arr[str.charAt(i) - 'a']++;
+            }else
+                arr[str.charAt(i) - 'A']++;
         }
-        sb.append(str2);
-        System.out.println(sb);
+
+        for (int i = 0; i < 26; i++) {
+            if(max < arr[i]){
+                max = arr[i];
+                n = i;
+            }else if(max == arr[i] && arr[i] != 0)
+                n = -2;
+        }
+
+        System.out.println((char)(n + 65));
     }
 }
