@@ -4,12 +4,15 @@ import java.io.InputStreamReader;
 import java.util.*;
 
 public class Main {
-    public static void main(String[] args) {
-        String str = "asdasd";
-        String s1 = str.substring(0, 3);
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String str = br.readLine();
+        String str1 = br.readLine();
+
 
         System.out.println(str);
-        System.out.println(s1);
+        System.out.println(str);
+
 
     }
 }

@@ -7,23 +7,23 @@ import java.io.InputStreamReader;
 public class B_1543 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String str1 = br.readLine();
-        String str2 = br.readLine();
+        String doc = br.readLine();
+        String word = br.readLine();
         int count = 0;
 
-        for (int i = 0; i < str1.length(); i++) {
-            if(str1.length() - i < str2.length())
-                break;
-
-            for (int j = 0; j < str2.length() ; j++) {
-                if(str1.charAt(i) == str2.charAt(j))
-                    i++;
-                if(j == str2.length() - 1)
-                    count++;
+        for (int i = 0; i < doc.length(); i++) {
+            boolean isMatch = true;
+            for (int j = 0; j < word.length(); j++) {
+                if(i + j >= doc.length() || doc.charAt(i) != word.charAt(j)){
+                    isMatch = false;
+                    break;
+                }
             }
-
+            if(isMatch){
+                count++;
+                i += word.length() - 1;
+            }
         }
-
         System.out.println(count);
     }
 }
