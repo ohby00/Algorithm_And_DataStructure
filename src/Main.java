@@ -3,13 +3,15 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        String str = "abcds";
+        String str = "1 2 3 4";
+        System.out.println(str);
+        String str1 = str.replace(" ", "");
 
-
-        System.out.println(str.substring(0,1));
-
+        int i = Integer.parseInt(str1);
+        System.out.println(i);
     }
 }
+
 
 
 
