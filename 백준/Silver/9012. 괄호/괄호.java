@@ -16,17 +16,17 @@ public class Main {
     }
 
     public static boolean check(String str) {
-        Stack<Character> stack = new Stack<>();
+        int x = 0;
+        int y = 0;
         for (char ch : str.toCharArray()) {
             if(ch == '(')
-                stack.push(ch);
+                x++;
             else {
-                if(stack.isEmpty())
+                y++;
+                if(y > x)
                     return false;
-                stack.pop();
             }
         }
-
-        return stack.isEmpty();
+        return x == y;
     }
 }
